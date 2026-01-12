@@ -1,0 +1,120 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+body.light{background:#f5f5f5;color:#111}
+body.dark{background:#0b0b0b;color:#fff}
+
+/* NAV */
+.glass-nav{
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(0,0,0,0.08);
+}
+body.dark .glass-nav{
+  background:rgba(0,0,0,0.55);
+  border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.top-header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 30px;position:sticky;top:0;z-index:20;
+}
+
+.nav-link{
+  position:relative;
+  padding:8px 14px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+}
+.nav-link:hover{
+  background:rgba(212,175,55,0.15);
+}
+
+.theme-btn{
+  margin-left:10px;
+  background:rgba(212,175,55,0.2);
+  border:none;
+  padding:8px 12px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.logo-area{display:flex;align-items:center;gap:10px;font-weight:700}
+.logo-area img{height:40px}
+
+.desktop-nav{display:none}
+.menu-icon{font-size:22px}
+
+/* HERO */
+.hero-mobile{height:85vh;position:relative;overflow:hidden;border-radius:0 0 30px 30px}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:1.5s}
+.hero-slide.active{opacity:1}
+.hero-slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')}
+.hero-slide:nth-child(2){background-image:url('https://v1realestatephotography.com/wp-content/uploads/2022/03/DJI_0461_2_3_4_5.jpg')}
+.hero-slide:nth-child(3){background-image:url('https://greenopalproperties.com/wp-content/uploads/2020/06/20240527_142827-1024x577.jpg')}
+
+.hero-overlay{text-align:center;color:#fff;position:absolute;bottom:70px;left:50%;transform:translateX(-50%)}
+.hero-title{font-size:3.2rem;font-weight:800}
+.hero-title span{display:block;font-size:1.6rem;color:#d4af37;margin-top:10px}
+.hero-btn{display:inline-block;margin-top:25px;background:#d4af37;color:#000;padding:16px 32px;border-radius:40px;text-decoration:none;font-weight:bold}
+
+/* CONTENT */
+.content{max-width:1100px;margin:auto;padding:60px 20px}
+.section{margin-bottom:90px}
+
+.section-head{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.gold-bar{
+  width:6px;
+  height:42px;
+  background:#d4af37;
+  border-radius:6px;
+}
+
+.section.highlight{background:#eaeaea;padding:40px;border-radius:18px}
+body.dark .section.highlight{background:#111}
+
+/* SERVICES PILLS */
+.services-pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+}
+.pill{
+  background:rgba(255,255,255,0.8);
+  padding:16px 26px;
+  border-radius:18px;
+  font-weight:500;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+body.dark .pill{background:#000}
+
+/* CONTACT */
+.contact-form{
+  max-width:650px;
+  background:#fff;
+  padding:40px;
+  border-radius:18px;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+body.dark .contact-form{background:#111}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width:100%;padding:14px;margin-bottom:18px;border-radius:8px;border:1px solid #ccc;
+}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.contact-form button{
+  width:100%;padding:16px;border:none;border-radius:40px;background:#d4af37;font-weight:bold;
+}
+
+.contact-icons a{font-size:36px;color:#25D366;margin-top:25px;display:inline-block}
+
+/* FOOTER */
+.site-footer{text-align:center;padding:25px 10px;font-size:14px;background:#ffffff}
+body.dark .site-footer{background:#0b0b0b;color:#aaa}
+
+@media(min-width:768px){
+  .desktop-nav{display:flex;align-items:center}
+  .menu-icon{display:none}
+  .hero-title{font-size:4.5rem}
+}
